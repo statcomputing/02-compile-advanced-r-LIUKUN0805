@@ -1,0 +1,49 @@
+---
+title: "problems and solutions"
+author: "KUN LIU"
+date: "2020/9/12"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## 1
+problems:
+Quitting from lines 223-235 (Introduction.Rmd) 
+Error in cat(paste0(contributors$desc, collapse = ", ")) : 
+
+solutions:
+Adding encoding = "UTF-8" in line 224 can fix it.
+
+## 2
+problems:
+'make' not Found
+
+solutions:
+install 'Rtools' and 
+```{r}
+writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")
+```
+
+
+
+
+## 3
+problems:
+! Package fontspec Error: The font "Inconsolata" cannot be found.
+! Package fontspec Error: The font "Andale Mono" cannot be found.
+
+solutions:
+download the fonts and install them.
+
+## 4
+problems:
+! LaTeX Error: Environment sidebar undefined.
+
+solutions:
+install tinytex and 
+```{r}
+devtools::install_github(c('yihui/knitr', 'rstudio/flexdashboard'))
+```
+
