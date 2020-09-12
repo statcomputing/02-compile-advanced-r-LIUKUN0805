@@ -9,18 +9,18 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ## 1
-problems:
+problem:
 Quitting from lines 223-235 (Introduction.Rmd) 
 Error in cat(paste0(contributors$desc, collapse = ", ")) : 
 
-solutions:
+solution:
 Adding encoding = "UTF-8" in line 224 can fix it.
 
 ## 2
-problems:
+problem:
 'make' not Found
 
-solutions:
+solution:
 install 'Rtools' and 
 ```{r}
 writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")
@@ -30,18 +30,18 @@ writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")
 
 
 ## 3
-problems:
+problem:
 ! Package fontspec Error: The font "Inconsolata" cannot be found.
 ! Package fontspec Error: The font "Andale Mono" cannot be found.
 
-solutions:
+solution:
 download the fonts and install them.
 
 ## 4
-problems:
+problem:
 ! LaTeX Error: Environment sidebar undefined.
 
-solutions:
+solution:
 install tinytex and 
 ```{r}
 devtools::install_github(c('yihui/knitr', 'rstudio/flexdashboard'))
